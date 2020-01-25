@@ -6,18 +6,11 @@ router.get("/", (request, response) => {
     queries.getEverything().then(bikes => {
         response.json({
             bikes
-        })
-    })
+        });
+    });
 
-    // response.json({
-    //     message: "Hello!"
-    // });
+
 });
 
 module.exports = router;
 
-
-
-// response.json({
-//     message: "Hello!"
-// });
