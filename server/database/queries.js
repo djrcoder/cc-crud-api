@@ -7,6 +7,6 @@ const knex = require("./knex");   // requires relative path not knex
 
 module.exports = {
     getEverything() {
-        return knex("bikes")
+        return knex("log")
     }
 }
