@@ -3,9 +3,9 @@ const router = express.Router();
 const queries = require("../database/queries")  // use knex queries file
 
 router.get("/", (request, response) => {
-    queries.getEverything().then(bikes => {
+    queries.getEverything().then(log => {
         response.json({
-            bikes
+            log
         });
     });
 
