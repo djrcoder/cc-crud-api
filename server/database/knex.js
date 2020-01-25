@@ -1,4 +1,5 @@
-const envirnoment = process.env.NODE_ENV || + 'development';
+const envirnoment = 'development';
+// const envirnoment = process.env.NODE_ENV || + 'development';
 // Dev will use development connection, else production connection.
 
 const config = require("../knexfile");
