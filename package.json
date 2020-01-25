@@ -10,11 +10,13 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "knex": "^0.20.8",
+    "nodemon": "^2.0.2",
     "path": "^0.12.7",
     "pg": "^7.17.1",
     "serve-favicon": "^2.5.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   }
 }
