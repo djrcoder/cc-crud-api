@@ -48,8 +48,21 @@ describe("CRUD API Server", () => {
             .expect('Content-Type', /json/)
             .expect(200)
             .then(response => {
-                expect(response.body.bikes[0].bike_name).to.equal("Steel Bike");
-                console.log(response.body.bikes[0]);
+                expect(response.body.log[0].activity_id).to.equal('3027');
+                console.log(response.body.log[0].activity_id);
+                done();
+            });
+    });
+
+    it("Is the correct length", (done) => {
+        request(app)
+            .get("/api/welcome")
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .then(response => {
+                expect(response.body.log.length).to.equal(9);
+                console.log(response.body.log.length);
                 done();
             });
     });
