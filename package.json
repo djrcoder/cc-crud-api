@@ -16,10 +16,12 @@
     "nodemon": "^2.0.2",
     "path": "^0.12.7",
     "pg": "^7.17.1",
-    "serve-favicon": "^2.5.0"
+    "serve-favicon": "^2.5.0",
+    "supertest": "^4.0.2"
   },
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "test": "mocha tests/test.js"
   }
 }
