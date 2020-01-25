@@ -1,0 +1,9 @@
+{
+  "name": "cc-crud-api",
+  "version": "1.0.0",
+  "description": "CRUD api service created during my time as a student at Code Chrysalis.",
+  "main": "index.js",
+  "repository": "https://github.com/djrcoder/cc-crud-api.git",
+  "author": "djrcoder djrcode@gmail.com",
+  "license": "MIT"
+}
