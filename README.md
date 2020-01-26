@@ -7,7 +7,7 @@ CRUD API service.
 This is an example of a CRUD (Create, Read, Update & Delete) API that is seeded with a weeks worth of activity data. It requires a postgresql server to be running locally.
 
 To begin, enter 
-`yarn start` 
+`yarn`
 in the terminal to install your dependecies.
 
 Ensure that you have a postgres server running locally. If you need to configure it, change the connection path in server/knexfile.js.
