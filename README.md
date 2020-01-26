@@ -28,10 +28,21 @@ Copy the relative path from index.html to begin querying data.
 Available endpoints are:
 
 http://localhost:3000/api/log      GET  ----> To show the table 'log'
+
+
 http://localhost:3000/api/id       GET  ----> To get a row by searching for id
+
+
 http://localhost:3000/api/         GET  ----> To show all data on two inner joined tables
+
+
 http://localhost:3000/api/new      POST ----> To run sample data creating a new activity
+
 http://localhost:3000/api/newact
+
+
 http://localhost:3000/api/del     DELETE ---> To delete a record by ID
+
+
 http://localhost:3000/api/update  PATCH  ---> To update a distance by activity ID.
  
