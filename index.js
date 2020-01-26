@@ -161,7 +161,7 @@ async function getAll() {
     generateTable(table, data);
 }
 
-//  activity_id |       time_date        | distance | total_time 
+
 
 async function newLog() {
 
@@ -229,9 +229,9 @@ async function distanceUpdate() {
         "distance": `${distance}`
     }
 
-    return fetch('http://localhost:3000/api/update', {
+    await fetch('http://localhost:3000/api/update', {
         headers: { "Content-Type": "application/json; charset=utf-8" },
-        method: 'POST',
+        method: 'PATCH',
         body: JSON.stringify(distanceOb)
     })
 }

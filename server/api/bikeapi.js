@@ -65,7 +65,7 @@ router.delete("/del", (request, response, next) => {
     });
 });
 
-router.post("/update", (request, response, next) => {
+router.patch("/update", (request, response, next) => {
     queries.newDistance(request.body).then(log => {
         console.log("Gets here")
         if (log) {
