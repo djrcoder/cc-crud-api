@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>Activity Log</title>
+</head>
+
+<body>
+    <h1>Activity API</h1>
+
+    <div id="buttons"></div>
+
+
+    <button type="button" onclick=getAll()>Get all stored Data</button>
+    <p></p>
+    <p></p>
+
+    <button type="button" onclick=getFromLog()>Get Log Data</button>
+
+    <p></p>
+    <p></p>
+
+    <button type="button" onclick=newLog()>Test make new</button>
+    <p></p>
+    <p></p>
+
+    </div>
+    <p></p>
+    <p></p>
+
+    Delete an entry (ID): <input type="number" id="delid" /><button onclick="deleteById()">Delete me!</button>
+
+    <p></p>
+    <img src="tree.png" alt="tree image">
+    <p></p>
+
+    Search by Activity ID: <input type="number" id="actid" name="Search by Activity ID" /><button
+        onclick="fetchByActivityId(), newAct()">Search!</button>
+
+    <p></p>
+    <p></p>
+    Enter Activity ID <input type="number" id="iddistance" />
+    Enter new distance <input type="number" id="newdistance" />
+    <button onclick="distanceUpdate()">Update!</button>
+
+
+    <div id="smile">
+        <p> ☺ </p>
+    </div>
+    <div id="title"></div>
+
+
+    <table></table>
+
+    <form></form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+</body>
+
+</html>

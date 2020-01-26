@@ -2,17 +2,15 @@ const express = require("express");
 const path = require("path");
 const favicon = require("serve-favicon");
 const bodyParser = require("body-parser");
-const port = 3000
-
+const port = 3000;
+const cors = require("cors");
 const app = express();
 
-const bikes = require("./server/api/bikeapi")   // this might not work
+const bikes = require("./server/api/bikeapi")
 
 app.use(bodyParser.json());
-
-app.use("/api/welcome", bikes)
-
-// app.listen(port, () => console.log(`My blog is listening on port ${port}!`))
+app.use(cors())
+app.use("/api/", bikes)
 
 app.listen(port, function () {
     console.log(`My server is listening on port ${port}!`)

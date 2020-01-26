@@ -1,24 +1,3 @@
-
-// const knex = require("../server/database/knex")
-// const app = require("../app")
-// const bodyParser = require("body-parser");
-
-// const chai = require("chai");
-// const chaiHttp = require("chai-http");
-// chai.use(chaiHttp);
-// chai.should();
-// chai.expect();
-// const pokeData = require("../src/data");
-
-// const { setupServer } = require("../src/server");
-// const server = setupServer();
-/*
- * This sprint you will have to create all tests yourself, TDD style.
- * For this you will want to get familiar with chai-http https://www.chaijs.com/plugins/chai-http/
- * The same kind of structure that you encountered in lecture.express will be provided here.
- */
-// const bikes = require("../server/api/bikeapi")
-
 const expect = require("chai").expect
 const knex = require("../server/database/knex")
 const app = require("../app")
@@ -28,41 +7,53 @@ const request = require("supertest")
 
 describe("CRUD API Server", () => {
 
-    it("Displays all information", (done) => {
+    it("Displays all information in object", (done) => {
         request(app)
-            .get("/api/welcome")
+            .get("/api")
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
             .expect(200)
             .then(response => {
-                expect(response.body).to.be.a('object');
-                console.log(response.body);
+                expect(response.body).to.be.a('array');
+                console.log(response.body[0].activity_id);
                 done();
             });
     });
 
     it("Has the correct entry", (done) => {
         request(app)
-            .get("/api/welcome")
+            .get("/api")
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
             .expect(200)
             .then(response => {
-                expect(response.body.log[0].activity_id).to.equal('3027');
-                console.log(response.body.log[0].activity_id);
+                expect(response.body[0].activity_id).to.equal('3027');
                 done();
             });
     });
 
     it("Is the correct length", (done) => {
         request(app)
-            .get("/api/welcome")
+            .get("/api")
             .set('Accept', 'application/json')
             .expect('Content-Type', /json/)
             .expect(200)
             .then(response => {
-                expect(response.body.log.length).to.equal(9);
-                console.log(response.body.log.length);
+                expect(response.body.length).to.equal(9);
+                console.log(response.body.length);
+                done();
+            });
+    });
+
+    it("Returns one object for a correct activity id search", (done) => {
+        request(app)
+            .get("/api/3028")
+            .set('Accept', 'application/json')
+            .expect('Content-Type', /json/)
+            .expect(200)
+            .then(response => {
+                expect(response.body.length).to.equal(1);
+                console.log(response.body);
                 done();
             });
     });
