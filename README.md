@@ -1,8 +1,6 @@
 # This was created during my time as a student at Code Chrysalis.
 
-
-
-CRUD API service. 
+### CRUD API service. 
 
 This is an example of a CRUD (Create, Read, Update & Delete) API that is seeded with a weeks worth of activity data. It requires a postgresql server to be running locally.
 

@@ -1,10 +1,6 @@
-
-
-
 async function getFromLog() {
     let elem = document.querySelector('table');
     elem.parentNode.removeChild(elem);
-
     let newTable = document.createElement("table");
     document.body.appendChild(newTable)
 
@@ -26,6 +22,7 @@ async function getFromLog() {
             row.appendChild(th);
         }
     }
+
     function generateTable(table, tdata) {
         for (let element of tdata) {
             let row = table.insertRow();
@@ -43,19 +40,10 @@ async function getFromLog() {
 }
 
 
-
-
-
-// activity id to come from html
-
 async function fetchByActivityId() {
-
     const activityId = document.getElementById("actid").value;
-    console.log(activityId)
-
     let elem = document.querySelector('table');
     elem.parentNode.removeChild(elem);
-
     let newTable = document.createElement("table");
     document.body.appendChild(newTable)
 
@@ -89,6 +77,7 @@ async function fetchByActivityId() {
                 row.appendChild(th);
             }
         }
+
         function generateTable(table, tdata) {
             for (let element of tdata) {
                 let row = table.insertRow();
@@ -110,7 +99,6 @@ async function getAll() {
 
     let elem = document.querySelector('table');
     elem.parentNode.removeChild(elem);
-
     let newTable = document.createElement("table");
     document.body.appendChild(newTable)
 
@@ -145,6 +133,7 @@ async function getAll() {
             row.appendChild(th);
         }
     }
+
     function generateTable(table, tdata) {
         for (let element of tdata) {
             let row = table.insertRow();
@@ -164,7 +153,6 @@ async function getAll() {
 
 
 async function newLog() {
-
     const newEntry = {
         "activity_id": "4058",
         "type_of_ride": "Morning",
@@ -205,7 +193,6 @@ async function deleteById() {
 
     const deleteId = document.getElementById("delid").value;
     console.log(deleteId)
-
     const deleteOb = {
         "id": `${deleteId}`
     }
@@ -219,11 +206,8 @@ async function deleteById() {
 }
 
 async function distanceUpdate() {
-
     const id = document.getElementById("iddistance").value;
     const distance = document.getElementById("newdistance").value;
-
-
     const distanceOb = {
         "id": `${id}`,
         "distance": `${distance}`

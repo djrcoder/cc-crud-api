@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 const port = 3000;
 const cors = require("cors");
 const app = express();
-
 const bikes = require("./server/api/bikeapi")
 
 app.use(bodyParser.json());
@@ -15,7 +14,6 @@ app.use("/api/", bikes)
 app.listen(port, function () {
     console.log(`My server is listening on port ${port}!`)
 })
-
 
 // 404 will be forwarded to error handler
 
@@ -34,7 +32,5 @@ app.use(function (error, request, response, next) {
         error: request.app.get('env') === 'development' ? error : {}
     });
 });
-
-
 
 module.exports = app;

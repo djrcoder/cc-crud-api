@@ -3,10 +3,8 @@ const knex = require("../server/database/knex")
 const app = require("../app")
 const request = require("supertest")
 
-// app.use("/api/welcome", bikes)
 
 describe("CRUD API Server", () => {
-
     it("Displays all information in object", (done) => {
         request(app)
             .get("/api")
